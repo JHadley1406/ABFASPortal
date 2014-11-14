@@ -1,0 +1,9 @@
+
+<br/>
+<br/>
+<form action="/edit_comment/{{ comment.id}}" method="post">
+    {% csrf_token %}
+    Comment Text:<br/>
+    <textarea rows="3" cols="30" name="text">{{ comment.text }}</textarea><br/>
+    <input type="submit" value="Submit" />
+</form>

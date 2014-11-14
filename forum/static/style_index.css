@@ -1,0 +1,330 @@
+div {
+  box-sizing: border-box;
+}
+*, *:before, *:after div {
+  box-sizing: inherit;
+}
+
+.whats-up {
+  background-color: white;
+  height: 185px;
+  margin-top: 30px;
+  border: 1px solid #E7E7E7;
+
+}
+
+#comment-input {
+  width: 100%;
+}
+
+.input-w-u > .form-inline .form-group {
+  width: 100%;
+
+
+}
+
+.messages {
+  height: 170px;
+  margin-top: 15px;
+  /*  border-bottom: 4px solid black;*/
+  overflow: scroll;
+  position: relative;
+}
+
+.name-span {
+  font-weight: 700;
+}
+
+.w-u-title {
+  padding-top: 36px;
+  /*margin-left: -15px;*/
+  /*background-color: black !important;
+  color: white;*/
+  /*border-right: 4px solid black;*/
+
+  /*  border-bottom: 4px solid black;*/
+  height: 100%;
+  font-size: 23px !important;
+  font-family: 'Fjalla One', sans-serif !important;
+}
+
+.w-up-form-wrapper {
+  /*  border-top: 1px solid #E7E7E7;*/
+  background-color: black;
+  /*  background-color: #F8F8F8;*/
+  padding: 10px;
+}
+
+.users i, .content i {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.users {
+  /*margin-bottom: 30px;*/
+}
+
+.light {
+  color: #6D6D6D !important;
+  font-size: 10px !important;
+  margin-top: 0px !important;
+}
+
+.content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 180px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.each-message-meta{
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: #6D6D6D;
+}
+.action a {
+  color: black;
+  text-decoration: none
+}
+
+.action a:hover {
+  text-decoration: none;
+}
+.img-circle {
+  height: 65px;
+  background-color: black;
+  width: 65px;
+  border: 1px solid #E7E7E7;
+}
+
+.post-meta {
+  font-size: 11px;
+}
+
+.main-title  {
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+
+}
+
+.fancy-text div {
+  font-family: 'Fjalla One', sans-serif;
+
+}
+
+.fancy-box {
+  height: 230px;
+  width: 230px;
+  background-color: white;
+  padding-top: 50px;
+  border: 1px solid #E7E7E7;
+  margin: 20px auto;
+}
+
+.double-b i {
+
+  font-size: 56px;
+}
+.small {
+  font-size: 16px;
+}
+
+.fancy-text div:nth-child(odd) {
+  font-size: 40px;
+}
+
+.user-meta {
+  margin-top: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.each-message-wrapper {
+  padding: 10px;/*
+  border: 1px solid #ddd;*/
+  height: 120px;
+
+  margin-bottom: 15px;
+}
+
+.main-board {
+  padding-bottom: 50px;
+  border-top: 1px solid #E7E7E7;
+  padding-top: 20px;
+  border-left:  1px solid #E7E7E7;
+  border-right:  1px solid #E7E7E7;
+  padding-bottom: 700px;
+  padding-top: -70px;
+  background: url(images/ABFAS-5-Edit.jpg) no-repeat center center fixed;
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+.m-t-square {
+  height: 180px;
+  padding-top: 15px;
+  width: 280px;
+  border: 4px solid black;
+  margin: 0 auto;
+}
+
+.bio-pic .img-circle {
+  height: 163px;
+  width: 163px;
+  padding: 7px;
+
+}
+
+
+.bio-pic img {
+ -webkit-filter: grayscale(100%);
+ -moz-filter: grayscale(100%);
+ filter: grayscale(100%);
+}
+.bio-name {
+  font-weight: bold;
+  font-size: 20px;
+  /*  font-family: 'Fjalla One', sans-serif !important;
+  */  margin-bottom: 25px;
+}
+.bio-pic {
+  margin-bottom: 20px;
+}
+.helper {
+  padding-top: 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.left-quote, .right-quote {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 45px;
+}
+
+.actual-comment {
+  padding-top: 3px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #E7E7E7;
+  position: relative;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.left-quote {
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+.right-quote {
+  position: absolute;
+  top: -5px;
+  right: 0;
+}
+.each-message-wrapper:last-child {
+}
+.double {
+ border-right:  1px solid #E7E7E7;
+ border-left:  1px solid #E7E7E7;
+ overflow: hidden;
+ padding-top: 50px;
+ padding-bottom: 50px;
+ clear: both;
+ background-color: white;
+}
+
+.logged-in-info {
+  color: white;
+  padding-top: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.input-w-u {
+  margin-left: 50px;
+}
+
+.board-bio-wrapper{
+  background-color: white;
+  border-right:  1px solid #E7E7E7;
+  border-left:  1px solid #E7E7E7;
+  color: black;
+  border-bottom: 1px solid red;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+.board-bio-wrapper > .col-sm-6 {
+  margin-bottom: 40px;
+
+}
+
+.top-p {
+  padding-top: 30px;
+
+  border-bottom:  1px solid #E7E7E7;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: 300;
+
+}
+
+.col-sm-6 > .col-sm-10 {
+  height: 320px;
+
+}
+
+.board-bio-wrapper p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: justify;
+
+}
+.dropdown {
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.logged-in-info .name-span {
+  text-decoration: underline;
+}
+
+.message-status-bar{
+  background-color: black;
+  color: white;
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  font-size: 12px;
+  text-transform: uppercase;
+  z-index: 20;
+  right: 30px;
+  opacity: 0.8;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 50%;
+}
+
+
+.base-container {
+  margin-bottom: 0px;
+  /*background-color: black;*/
+}
+
+.top-p {
+
+}
+
+ul {
+}
+
+.dropdown .selected, .dropdown li {
+  padding: 1px 12px !important;
+  text-align: center;
+}

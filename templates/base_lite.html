@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}POD{% endblock %}</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/glyphicons-halflings-regular.svg' %}">
+
+
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'style_index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/easydropdown.flat.css' %}">
+
+
+
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lora|Libre+Baskerville|EB+Garamond' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Fira+Sans|Fjalla+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+<body class="{% block body_class %}{% endblock %}">
+  <div class="col-sm-10 col-sm-offset-1 base-container text-center">
+    {% block content %}
+    {% endblock content %}
+  </div>
+
+</body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.easydropdown.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/skrollr.js' %}"></script>
+
+
+<script type="text/javascript">
+var s = skrollr.init();
+</script>
+</html>

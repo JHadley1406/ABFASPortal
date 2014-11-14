@@ -1,0 +1,76 @@
+
+{% extends "auth.html" %}
+{% block title %}{{ parent_forum.title }}{% endblock title %}
+
+{% block content %}
+
+<div class="header">
+  <h1><a href="{% url 'forum.views.forum_list' %}">{{ parent_forum.title }}</a></h1>
+</div>
+
+{% if user.is_authenticated and not parent_forum.is_locked %}
+<a href="{% url 'forum.views.add_thread' %}" class="btn btn-default add-new-forum">Add New Thread</a>
+{% endif %}
+{% if threads %}
+{% for thread in threads %}
+<div class="all-threads">
+
+  <div class="col-sm-10 col-sm-offset-1 each-thread">
+    <div class="row">
+     <a href="{% url 'forum.views.thread' thread.id %}" class="all-container-link">
+      <div class="col-sm-12 text-left">
+        <div class="row thread-row">
+          <div class="col-sm-6 thread-title">
+            <div class="thread-icon">
+              <i class="fa fa-question"></i>
+            </div>
+            {{ thread.title}}
+          </div>
+          <div class="col-sm-6 thread-meta">
+            <div class="col-sm-6 created-by  text-right">
+              Created By: {{ thread.created_by }}
+            </div>
+            <div class="col-sm-6 created-on text-right">
+             On: {{ thread.created_on }}
+           </div>
+         </div>
+       </div>
+       {% for post in last_posts %}
+       {% if post.thread.id == thread.id %}
+       <div class="col-sm-12 last-post-snippet">
+        <span class="emphasis">Latest post:</span> {{ post.text }}
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="col-sm-6 posted-by text-left">
+            Posted by: {{ post.created_by.username }}
+          </div>
+          <div class="col-sm-6 posted-on text-left">
+            On: {{ post.created_on }}.
+          </div>
+        </div>
+
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</a>
+</div>
+
+
+
+
+
+{% endfor %}
+{% else %}
+<div class="no-content">
+  <i class="fa fa-frown-o"></i>
+  <h4>No Threads to Display</h4>
+</div>
+{% endif %}
+
+{% endblock content %}

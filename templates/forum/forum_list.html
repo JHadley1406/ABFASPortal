@@ -1,0 +1,40 @@
+{% extends "auth.html" %}
+{% block title %}POD Forums{% endblock title %}
+
+{% block content %}
+{% if forums %}
+<div class="row header">
+    <h1> POD Forums</h1>
+    {% if user.is_superuser %}
+    <a href="{% url 'forum.views.add_forum' %}" class="btn btn-default add-new-forum">Add New Forum</a>
+    {% endif %}
+</div>
+
+{% for forum in forums %}
+<div class="col-sm-8 col-sm-offset-2 forum-list">
+
+    <div class="one-forum">
+        <a href="{% url 'forum.views.thread_list' forum.id %}" class="all-container-link">
+            <div class="col-sm-12 text-left forum-title">
+                {{ forum.title}}
+            </div>
+
+            <div class="row details">
+                <div class="col-sm-6 text-left forum-description">
+                    {{ forum.description }}
+                </div>
+                <div class="col-sm-6 text-right forum-meta-data">
+                    Created By: {{ forum.created_by }}
+                    On: {{ forum.created_on }}
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+{% endfor %}
+{% else %}
+<h1 style="margin-top: 200px">No Forums to list</h1>
+{% endif %}
+{% endblock content %}

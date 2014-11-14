@@ -1,0 +1,26 @@
+{% extends "auth.html" %}
+{% block title %}{{ parent_forum.title }}{% endblock title %}
+
+{% block content %}
+<div class="forum-back">
+  <div class="row header start-forum"><h1>Add a New Forum</h1></div>
+
+  <div class="col-sm-4 col-sm-offset-4">
+    <form action="/add_forum/" method="post" role="form" class="form">
+      <div class="form-group padding">
+        {% csrf_token %}
+        <label for="title" class="label-new">Forum Title:</label>
+        <input type="text" name="title" value="" class="form-control" data-toggle="tooltip" data-placement="left" title="Tooltip on left"/>
+      </div>
+      <div class="form-group extrapadding">
+        <label for="description" class="label-new">Forum Description:</label>
+        <textarea rows="3" cols="30" name="description" class="form-control"></textarea><br/>
+        <input type="submit" value="Create Forum" class="btn btn-default btn-block submit-form"/>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock content %}

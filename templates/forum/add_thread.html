@@ -1,0 +1,18 @@
+{% extends "auth.html" %}
+{% block title %}{{ parent_forum.title }}{% endblock title %}
+
+{% block content %}
+
+<div class="row header start-forum"><h1>Add a New Thread</h1></div>
+<div class="col-sm-4 col-sm-offset-4">
+  <form action="/add_thread/" method="post" role="form" class="form">
+    <div class="form-group padding">
+      {% csrf_token %}
+      <label for="title" class="label-new">Thread Title:</label>
+
+      <input type="text" name="title" value="" class="form-control"/>
+      <input type="submit" value="Create Thread" class="btn btn-default btn-block submit-form thread"/>
+    </div>
+  </form>
+</div>
+{% endblock content %}

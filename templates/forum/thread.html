@@ -1,0 +1,75 @@
+
+{% extends "auth.html" %}
+{% load forum_tags %}
+{% block title %}{{ parent_thread.title }}{% endblock title %}
+
+{% block content %}
+<div class="thread-header">
+    <a href="{% url 'forum.views.forum_list' %}" class="parent-forum-title">{{ parent_forum.title }}</a>
+    <h1 class="right-color">
+        <a href="{% url 'forum.views.thread_list' parent_forum.pk %}" class="parent-thread-title">{{ parent_thread.title }}</a></h1>
+
+        {% if user.is_authenticated %}
+        {% if not parent_thread.is_locked and not parent_forum.is_locked %}
+        <a href="{% url 'forum.views.add_comment' 0 %}" class="btn btn-default add-new-post">Add New Comment</a>
+    </div>
+
+    <div class="closed-or-logged-out col-sm-12">
+        {% else %}
+        <div class="no-new-c"><i class="fa fa-exclamation-circle"></i> This thread is currently closed to new comments <i class="fa fa-exclamation-circle"></i> </div>
+        {% endif %}
+        {% else %}
+        Please log in to add a comment.
+        {% endif %}
+    </div>
+
+
+
+
+    <div class ="all-posts col-sm-10 col-sm-offset-1">
+        {% if posts %}
+
+        {% for post in posts %}
+        <div class="each-post">
+            <div class="row text-left meta-post">
+                <div class="col-sm-6 text-left">
+                    By: {{ post.created_by }}{% if user.is_superuser %} <span class="moderator-label">( <i class="fa fa-graduation-cap"></i>Moderator )</span> {% endif %}
+                </div>
+                <div class="col-sm-6 text-right">
+                    Posted On: {{ post.created_on }}
+                </div>
+            </div>
+            <div class="col-sm-12 post-text text-left">
+
+                {{ post.text }}
+            </div>
+            <div class="col-sm-12 post-options">
+                <div class="col-sm-6 text-right">
+                    {% if user.is_authenticated and not parent_thread.is_locked and not parent_forum.is_locked %}
+                    <a href="{% url 'addComment' post.id %}" class="btn-sm reply-button">Reply</a>
+                    {% endif %}
+
+                    {% if user == post.created_by or user.is_superuser %}
+                    {% if not parent_thread.is_locked and not parent_forum.is_locked %}
+                    <a href="{% url 'editComment' post.id %}" class="btn-sm edit-button">Edit</a>
+                    {% endif %}
+                    {% endif %}
+                </div>
+
+                <div class="col-sm-6 text-right">
+
+                    This Post's ID: {{ post.id }}
+                    This Post's Parent's ID: {{ post.parent_post.id }}
+                    This Post's Tier is: {{ post.tier }}
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <div class="no-content">
+        <h6>No comments to Display</h6>
+    </div>
+    {% endif %}
+    {% endblock content %}
