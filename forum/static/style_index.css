@@ -244,7 +244,7 @@ div {
 }
 
 .input-w-u {
-  margin-left: 50px;
+
 }
 
 .board-bio-wrapper{
@@ -327,4 +327,22 @@ ul {
 .dropdown .selected, .dropdown li {
   padding: 1px 12px !important;
   text-align: center;
+}
+
+.dropdown {
+  width: 100% !important;
+  margin-top: 0;
+}
+
+.modal-header {
+  color: white;
+  min-height: 60px !important;
+  padding-bottom: 15px !important;
+  background-color: #29AF84;
+}
+
+
+
+.modal-icon {
+
 }
