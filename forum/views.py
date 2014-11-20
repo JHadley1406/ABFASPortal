@@ -5,6 +5,11 @@ from models import Thread, Post, Forum
 from django.template import RequestContext
 
 
+
+# def index
+#     return render_to_response("usermodule/index.html")
+
+
 # output views
 def forum_list(request):
     request.session['call_page'] = "forums"
