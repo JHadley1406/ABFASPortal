@@ -338,11 +338,76 @@ ul {
   color: white;
   min-height: 60px !important;
   padding-bottom: 15px !important;
+  padding-top: 10px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
   background-color: #29AF84;
 }
 
 
+.modal-title {
+  padding-top: 5px;
+}
 
+.modal-header > .close {
+  font-size: 26px;
+  font-weight: normal;
+  color: white;
+  opacity: 0.8;
+  margin-top: 3px;
+
+}
+
+
+.icon {
+  float: left;
+
+}
+
+.modal-footer > .btn-primary {
+  background-color: #29AF84;
+  color: white;
+  border: 1px solid #29AF84;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.modal-footer > .btn-default {
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: grey;
+  border: 1px solid grey;
+  color: white;
+  opacity: 0.8;
+}
 .modal-icon {
 
+}
+
+
+.vote i {
+  font-size: 20px;
+  padding: 3px;
+}
+
+.action-wrapper{
+
+  margin-right: -20px;
+  padding-right: 0px;
+}
+
+
+.vote {
+  padding-right: 0px !important;
+}
+
+
+.text-a-style {
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+.form-control:focus {
+border-color: #29AF84;
+box-shadow: inset 0 0px 0px #29AF84, 0 0 0px #29AF84;
 }
