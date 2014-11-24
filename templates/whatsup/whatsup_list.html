@@ -1,0 +1,43 @@
+{% extends "base_lite.html" %}
+{% block content %}
+
+{% if whatsUpData %}
+{% for WhatsUp in WhatsUpData %}
+<div class="main-title col-sm-2 text-center w-u-title">
+      <div class="col-sm-12"><i class="fa fa-exclamation"></i></div>
+      <div class="col-sm-12 users"><i class="fa fa-users"></i></div>
+      What's Up?</div>
+      <div class="col-sm-10 text-center messages">
+        <div class="col-sm-12 each-message-wrapper">
+          <div class="col-sm-2 text-center"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" class="img-responsive img-circle img-thumbnail"><div class="user-meta text-center">Katey Perry</div><div class="user-meta light text-center">Cincinatti, OH</div></div>
+          <div class="col-sm-10"><div class="helper"><span class="name-span">{{WhatsUp.user_id.LastName}}</span> {{WhatsUp.action_id.action_text}}</div>
+
+          <div class="actual-comment text-center">{{WhatsUp.whats_up_text}}<div class="left-quote">"</div>
+          <div class="right-quote">"</div></div>
+        </div>
+        <div class="col-sm-10 each-message-meta">
+          <div class="col-sm-8">
+            <div class="row">
+              <div class="col-sm-3 post-meta text-left"> 12 Replies</div>
+              <div class="col-sm-3 post-meta text-left">+ 35 Votes</div>
+              <div class="col-sm-6 post-meta text-left"> Posted {{WhatsUp.created_on}}</div>
+            </div>
+          </div>
+          <div class="col-sm-4 action-wrapper">
+            <div class="col-sm-6 action text-right"><a href="#" data-toggle="modal" data-target="#respondModal">Reply</a> </div>
+            <div class="col-sm-6 action vote text-right">
+              <a href="#"><i class="fa fa-long-arrow-up"></i></a>
+              <a href="#"><i class="fa fa-long-arrow-down"></i></a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+ </div>
+ {% endfor %}
+{% else %}
+<h1 style="margin-top: 200px">No What's Up Entries to list</h1>
+{% endif %}
+
+
+{% endblock content %}

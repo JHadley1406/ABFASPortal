@@ -1,0 +1,18 @@
+{% extends "auth.html" %}
+
+{% block content %}
+<div class="forum-back">
+  <div class="row header start-forum"><h1>Tell Us What's Up</h1></div>
+
+  <div class="col-sm-4 col-sm-offset-4">
+    <form action="/add_comment/{{parent_comment}}" method="post">
+      {% csrf_token %}
+
+      <label for="text" class="label-new">What's Up:</label>
+
+      <textarea rows="3" cols="30" name="text" class="form-control"></textarea><br/>
+      <input type="submit" value="Add Post" class="btn btn-default btn-block submit-form add-post"/>
+    </form>
+
+
+    {% endblock content %}
