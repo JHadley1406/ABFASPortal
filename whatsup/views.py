@@ -21,7 +21,10 @@ def add_whatsup(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect()
     if request.POST:
-        #build a whatsup object and post it to the database
+        whatsup = WhatsUpData.objects.create(user_id=request.user,
+                                             action_id=request.POST.get('dropdownData'),
+                                             whats_up_text=request.POST.get('text'))
+        whatsup.save()
     return render_to_response("whatsup/add_whatsup.html",
                               dict(whatsUpActions = WhatsUpActions.objects.all()),
                               RequestContext(request))
