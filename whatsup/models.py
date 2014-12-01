@@ -4,7 +4,7 @@ from usermodule.models import PodUser
 # Create your models here.
 class WhatsUpData(models.Model):
     user_id = models.ForeignKey(PodUser)
-    action_id = models.ForeignKey(WhatsUpActions)
+    action_id = models.ForeignKey('WhatsUpActions')
     whats_up_text = models.TextField()
     created_on = models.DateTimeField(auto_now_add = True)
     last_updated = models.DateTimeField(auto_now_add = True)
