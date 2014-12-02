@@ -9,6 +9,14 @@ class WhatsUpData(models.Model):
     created_on = models.DateTimeField(auto_now_add = True)
     last_updated = models.DateTimeField(auto_now_add = True)
 
+    def __unicode__(self):
+        return self.user_id.first_name + ": " + \
+               self.action_id.action_text + " " + \
+               self.whats_up_text
+
 class WhatsUpActions(models.Model):
     action_text = models.CharField(max_length = 32)
     created_on = models.DateTimeField(auto_now_add = True)
+
+    def __unicode__(self):
+        return self.action_text
