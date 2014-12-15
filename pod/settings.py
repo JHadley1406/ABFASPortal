@@ -61,8 +61,13 @@ WSGI_APPLICATION = 'pod.wsgi.application'
 
 DATABASES = {
 'default': {
-'ENGINE': 'django.db.backends.postgresql_psycopg2',
-'NAME': 'portal',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+    'NAME': 'portal',                      # Or path to database file if using sqlite3.
+    # The following settings are not used with sqlite3:
+    'USER': 'Ykat',
+    'PASSWORD': '',
+    'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+    'PORT': '',                      # Set to empty string for default.
 }
 }
 
@@ -81,6 +86,25 @@ USE_L10N = True
 USE_TZ = True
 
 
+
+
+import dj_database_url
+
+# DATABASES['default'] =  dj_database_url.config()
+
+# DATABASE_URL = 'postgresql:///postgresql'
+
+
+# DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
@@ -95,15 +119,4 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
-
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
-
 
