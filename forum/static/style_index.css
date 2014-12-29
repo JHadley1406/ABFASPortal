@@ -303,6 +303,24 @@ div {
   color: white;
 }
 
+.navbar-default .navbar-nav > li > a {
+  transition: all 150ms ease-in-out;
+  color: black;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #29AF84;
+}
+
+.navbar-nav > li {
+  border-bottom: 3px solid #F8F8F8;
+  transition: all 150ms ease-in-out;
+}
+.navbar-nav > li:hover {
+  border-bottom: 3px solid black;
+
+}
+
 .message-status-bar{
   background-color: black;
   color: white;
