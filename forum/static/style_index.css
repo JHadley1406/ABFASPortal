@@ -291,7 +291,12 @@ div {
 }
 
 .logged-in-info .name-span {
+/*  text-decoration: underline;
+*/}
+
+.logged-in-info .name-span a {
   text-decoration: underline;
+  color: white;
 }
 
 .message-status-bar{

@@ -142,8 +142,22 @@
 <div class="col-sm-12 w-up-form-wrapper">
   <div class="row">
     <div class="col-sm-3 logged-in-info ">
-      Logged in as <span class="name-span">Josiah Hadley, MD</span>
-    </div>
+
+      {% block login %}
+
+{% if user.username %}
+<div class="logged-in">
+  <span class="user-name">Logged In As: <span class="user"><i class="fa fa-user"></i> {{ user.username }}</span></span>
+  <a href="{% url 'usermodule.views.logout_user' %}" class="btn btn-default logout">Logout</a>
+</div>
+{% else %}
+  <span class="name-span">Please <a href="#">log in</a> to make a post.</span>
+
+  {% endif %}
+
+  {% endblock login %}
+<!--       Logged in as <span class="name-span">Josiah Hadley, MD</span>
+ -->    </div>
     <div class="col-sm-9">
       <div class="col-sm-4">
         <select class="dropdown">
