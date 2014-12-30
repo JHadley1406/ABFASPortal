@@ -3,7 +3,6 @@ from django.template import RequestContext
 import json
 from models import WhatsUpData, WhatsUpActions
 from django.http import HttpResponseRedirect
-from jsonfield import JSONField
 
 
 # Create your views here.
