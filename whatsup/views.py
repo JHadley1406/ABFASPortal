@@ -3,6 +3,8 @@ from django.template import RequestContext
 import json
 from models import WhatsUpData, WhatsUpActions
 from django.http import HttpResponseRedirect
+from jsonfield import JSONField
+
 
 # Create your views here.
 #what'sup main page
@@ -34,7 +36,7 @@ def add_whatsup(request):
 
 #doing some weird stuff
 def get_whatsup(request):
-    json.dumps(whatsUpData)
-    return HttpResponse(whatsUpData, mimetype='application/json')
+    json.dumps(dict(WhatsUpData=WhatsUpData.objects.all()))
+    return HttpResponse(WhatsUpData, mimetype='application/json')
 
 

@@ -226,16 +226,17 @@
   <a href="#">ABPS-STAGING</a>
 </div>
 
-{% endblock content %}
 
 
-
-          <div class="col-md-6" ng-repeat="question in questions">
+          <div class="col-md-6" ng-repeat="WhatsupData in WhatsupDatas">
             <div class="well">
               <div class="media">
-                <div class="media-body"> <h4 class="media-heading">{{question.email}} asks</h4>
-                  <p>{{question.body}}</p>
+                <div class="media-body"> <h4 class="media-heading">{{WhatsupData.whats_up_text}} asks</h4>
                 </div>
               </div>
             </div>
           </div>
+
+{% endblock content %}
+
+
