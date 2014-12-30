@@ -114,6 +114,7 @@
 
 
 <script type="text/javascript">
+
 var WhatsUp = angular.module('WhatsUp', []).config(function($httpProvider) {
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 }).controller('MainController', ['$scope', '$http',

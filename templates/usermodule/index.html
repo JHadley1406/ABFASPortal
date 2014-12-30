@@ -229,3 +229,13 @@
 {% endblock content %}
 
 
+
+          <div class="col-md-6" ng-repeat="question in questions">
+            <div class="well">
+              <div class="media">
+                <div class="media-body"> <h4 class="media-heading">{{question.email}} asks</h4>
+                  <p>{{question.body}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
