@@ -229,27 +229,3 @@
 {% endblock content %}
 
 
-<script type="text/javascript">
-var WhatsUp = angular.module('WhatsUp', []).config(function($httpProvider) {
-    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-}).controller('MainController', ['$scope', '$http',
-    function($scope, $http) {
-      console.log('yo')
-      $http.get("/whatsup/whatsup_list").then(function(response){
-        $scope.data = response.data;
-      });
-
-      $scope.addQuestion = function() {
-        $http.post("/questions" , {
-          email: $scope.email,
-          body: $scope.body
-        }).success(function(data) {
-          console.log(data);
-          $("#askQuestionModal").hide();
-          $scope.questions.push(data);
-        }).error(function(error) {
-          console.log(error);
-        })
-      }
-  }]);
-</script>

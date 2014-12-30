@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.utils import simplejson
+import json
 from models import WhatsUpData, WhatsUpActions
 from django.http import HttpResponseRedirect
 
@@ -32,7 +32,7 @@ def add_whatsup(request):
                               dict(whatsUpActions = WhatsUpActions.objects.all()),
                               RequestContext(request))
 
-
+#doing some weird stuff
 def get_whatsup(request):
     json.dumps(whatsUpData)
     return HttpResponse(whatsUpData, mimetype='application/json')
