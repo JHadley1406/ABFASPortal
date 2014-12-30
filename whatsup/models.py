@@ -1,5 +1,6 @@
 from django.db import models
 from usermodule.models import PodUser
+from jsonfield import JSONField
 
 # Create your models here.
 class WhatsUpData(models.Model):
@@ -8,6 +9,10 @@ class WhatsUpData(models.Model):
     whats_up_text = models.TextField()
     created_on = models.DateTimeField(auto_now_add = True)
     last_updated = models.DateTimeField(auto_now_add = True)
+
+    json_data = JSONField(default={}, blank=True)
+
+
 
 class WhatsUpActions(models.Model):
     action_text = models.CharField(max_length = 32)

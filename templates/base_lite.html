@@ -125,7 +125,7 @@ var WhatsUp = angular.module('WhatsUp', []).config(function($httpProvider) {
       });
 
       $scope.addQuestion = function() {
-        $http.post("/questions" , {
+        $http.post("/whatsup/" , {
           email: $scope.email,
           body: $scope.body
         }).success(function(data) {
