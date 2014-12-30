@@ -1,5 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.utils import simplejson
 from models import WhatsUpData, WhatsUpActions
 from django.http import HttpResponseRedirect
 
@@ -10,6 +11,8 @@ def whatsup_list(request):
     return render_to_response("whatsup/whatsup_list.html",
                               dict(whatsUpData=WhatsUpData.objects.all()),
                               RequestContext(request))
+
+
 
 #view individual what's up
 def whatsup(request, whatsup_number):
@@ -28,5 +31,10 @@ def add_whatsup(request):
     return render_to_response("whatsup/add_whatsup.html",
                               dict(whatsUpActions = WhatsUpActions.objects.all()),
                               RequestContext(request))
+
+
+def get_whatsup(request):
+    json.dumps(whatsUpData)
+    return HttpResponse(whatsUpData, mimetype='application/json')
 
 
