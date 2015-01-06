@@ -42,7 +42,7 @@ INSTALLED_APPS = (
     'usermodule',
     'whatsup',
     'forum',
-    'dj_database_url'
+    'dj-database-url'
     )
 
 MIDDLEWARE_CLASSES = (
