@@ -61,9 +61,12 @@ WSGI_APPLICATION = 'pod.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
+
+DATABASES = {'default': dj_database_url.config(default=os.environ["DATABASE_URL"])}
+
+
 DATABASES = {
-'default': dj_database_url.config(default=os.environ["DATABASE_URL"]),
-{
+'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
     'NAME': 'portal',                      # Or path to database file if using sqlite3.
     # The following settings are not used with sqlite3:
