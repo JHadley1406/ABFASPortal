@@ -14,8 +14,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 
-import dj_database_url
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -47,7 +45,7 @@ INSTALLED_APPS = (
     'usermodule',
     'whatsup',
     'forum',
-    'dj-database-url'
+    'dj_database_url'
     )
 
 MIDDLEWARE_CLASSES = (
@@ -66,6 +64,10 @@ WSGI_APPLICATION = 'pod.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+
+
+
+import dj_database_url
 
 
 DATABASES = {'default': dj_database_url.config(default=os.environ["DATABASE_URL"])}
