@@ -1,2 +1,2 @@
-web: gunicorn pod.wsgi --log-file -
 
+web: waitress-serve --port=$PORT pod.wsgi:application
