@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT pod.wsgi:application
+web: waitress-serve --port=$PORT portal.wsgi:application
