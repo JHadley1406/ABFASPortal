@@ -8,7 +8,7 @@ from django.http import HttpResponseRedirect
 def whatsup_list(request):
 
     return render_to_response("whatsup/whatsup_list.html",
-                              dict(whatsUpData=WhatsUpData.objects.all()),
+                              dict(whatsUpData=WhatsUpData.objects.all(), ),
                               RequestContext(request))
 
 #view individual what's up
