@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'forum',
     'dj_database_url'
 
+
     )
 
 MIDDLEWARE_CLASSES = (
