@@ -1,19 +1,19 @@
+PORTAL - SET UP INSTRUCTIONS
+
+
+CURRENT MODULES INSTALLED
+-------------------------------------------------------------
 Django==1.7.1
-boto==2.35.1
 dj-database-url==0.3.0
 dj-static==0.0.6
 django-crispy-forms==1.4.0
-django-herokuapp==0.9.19
-django-require==1.0.6
-django-require-s3==1.0.0
-django-storages==1.1.8
 django-toolbelt==0.0.1
 djangorestframework==3.0.2
 gunicorn==19.1.1
 jsonfield==1.0.0
 psycopg2==2.5.4
-pytz==2014.10
-sh==1.11
 static3==0.5.1
-waitress==0.8.9
 wsgiref==0.1.2
+
+
+

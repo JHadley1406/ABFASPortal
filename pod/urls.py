@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^add_comment/$', 'forum.views.add_comment', name="addCommentNone"),
     url(r'^add_comment/(\d+)$', 'forum.views.add_comment', name="addComment"),
     url(r'^edit_comment/(\d+)$', 'forum.views.edit_comment', name="editComment"),
-    url(r'^whatsup/', 'whatsup.views.whatsup_list', name="whatsup"),
+    url(r'^whatsup/', 'whatsup.views.whatsup_list', name="whatsUp"),
+    url(r'^get_whatsup/', 'whatsup.views.get_whatsup', name="getWhatsUp"),
     url(r'^add_whatsup/', 'whatsup.views.add_whatsup', name="addWhatsUp"),
     )

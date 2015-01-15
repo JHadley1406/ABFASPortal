@@ -291,7 +291,42 @@ div {
 }
 
 .logged-in-info .name-span {
+/*  text-decoration: underline;
+*/}
+
+#outer-nav {
+  border: solid 0px black;
+  margin-top: 10px;
+}
+
+.logged-in-info .name-span a {
   text-decoration: underline;
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  transition: all 150ms ease-in-out;
+  color: black;
+}
+
+#loginModal .modal-header {
+  background-color: black;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #29AF84;
+}
+
+.navbar-nav > li {
+  border-bottom: 3px solid #F8F8F8;
+  transition: all 150ms ease-in-out;
+}
+.navbar-nav > li:hover {
+  border-bottom: 3px solid black;
+
 }
 
 .message-status-bar{
