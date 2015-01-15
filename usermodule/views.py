@@ -2,6 +2,7 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from models import Education, EducationType
+from django.template import RequestContext
 from django.shortcuts import render_to_response
 
 
@@ -41,7 +42,7 @@ def edit_user(request):
                                     args=[request.session['args_val']])
 
 def index(request):
-    return render_to_response("usermodule/index.html")
+    return render_to_response("usermodule/index.html",  context_instance=RequestContext(request))
 
 def pod_demo(request):
     return render_to_response("usermodule/pod_demo.html")

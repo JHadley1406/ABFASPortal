@@ -13,6 +13,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -36,10 +39,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'herokuapp',
+    'jsonfield',
     'crispy_forms',
     'usermodule',
     'whatsup',
     'forum',
+    'dj_database_url',
+    'waitress'
     )
 
 MIDDLEWARE_CLASSES = (
@@ -59,17 +66,27 @@ WSGI_APPLICATION = 'pod.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
+
+
+
 DATABASES = {
 'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-    'NAME': 'portal',                      # Or path to database file if using sqlite3.
-    # The following settings are not used with sqlite3:
-    'USER': 'Ykat',
-    'PASSWORD': '',
-    'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
-    'PORT': '',                      # Set to empty string for default.
+'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+'NAME': 'portal3',                      # Or path to database file if using sqlite3.
+# The following settings are not used with sqlite3:
+'USER': 'Ykat',
+'PASSWORD': '',
+'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+'PORT': '',                      # Set to empty string for default.
 }
 }
+
+
+#HEROKU
+# DATABASES = {'default': dj_database_url.config(default=os.environ["DATABASE_URL"])}
+
+
+
 
 
 # Internationalization
@@ -88,14 +105,15 @@ USE_TZ = True
 
 
 
-import dj_database_url
-
-# DATABASES['default'] =  dj_database_url.config()
-
 # DATABASE_URL = 'postgresql:///postgresql'
 
 
 # DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+
+import dj_database_url
+DATABASES = {
+    "default": dj_database_url.config(default='postgres://localhost'),
+}
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
