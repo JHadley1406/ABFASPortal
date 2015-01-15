@@ -39,14 +39,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'herokuapp',
     'jsonfield',
     'crispy_forms',
     'usermodule',
     'whatsup',
     'forum',
-    'dj_database_url'
+    'dj_database_url',
+    'waitress'
     )
 
 MIDDLEWARE_CLASSES = (
