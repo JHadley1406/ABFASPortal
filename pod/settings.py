@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'herokuapp',
     'jsonfield',
     'crispy_forms',
     'usermodule',
