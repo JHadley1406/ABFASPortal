@@ -72,10 +72,10 @@ WSGI_APPLICATION = 'pod.wsgi.application'
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-'NAME': 'portal3',                      # Or path to database file if using sqlite3.
+'NAME': 'portal',                      # Or path to database file if using sqlite3.
 # The following settings are not used with sqlite3:
-'USER': 'Ykat',
-'PASSWORD': '',
+'USER': 'portal',
+'PASSWORD': 'portal',
 'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
 'PORT': '',                      # Set to empty string for default.
 }
@@ -110,10 +110,10 @@ USE_TZ = True
 
 # DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
-import dj_database_url
-DATABASES = {
-    "default": dj_database_url.config(default='postgres://localhost'),
-}
+#import dj_database_url
+#DATABASES = {
+#    "default": dj_database_url.config(default='postgres://localhost'),
+#}
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

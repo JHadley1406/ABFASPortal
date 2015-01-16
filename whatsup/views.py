@@ -2,8 +2,8 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 import json
 from models import WhatsUpData, WhatsUpActions
-from django.http import HttpResponseRedirect
-
+from django.http import HttpResponseRedirect, HttpResponse
+from django.core.urlresolvers import reverse
 
 # Create your views here.
 #what'sup main page
@@ -23,7 +23,7 @@ def whatsup(request, whatsup_number):
 #add new what's up
 def add_whatsup(request):
     if not request.user.is_authenticated():
-        return HttpResponseRedirect()
+        return HttpResponseRedirect(reverse("WhatsUp"))
     if request.POST:
         whatsup = WhatsUpData.objects.create(user_id=request.user,
                                              action_id=request.POST.get('dropdownData'),
