@@ -127,7 +127,8 @@ ALLOWED_HOSTS = ['*']
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = ''
+STATIC_ROOT = path.join(PROJECT_ROOT,'static')
+
 
 
 STATICFILES_DIRS = (
