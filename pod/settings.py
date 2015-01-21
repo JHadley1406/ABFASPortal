@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
 PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
+STATIC_ROOT = os.path.join(PROJECT_PATH,'static')
 
 
 
@@ -128,10 +132,6 @@ ALLOWED_HOSTS = ['*']
 
 STATIC_URL = '/static/'
 
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
-PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
-STATIC_ROOT = os.path.join(PROJECT_PATH,'static')
 
 
 
