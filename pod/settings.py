@@ -134,11 +134,11 @@ STATIC_URL = '/static/'
 
 
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'forum/static'),
-    os.path.join(BASE_DIR, 'pod/static'),
-    )
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+#     os.path.join(BASE_DIR, 'forum/static'),
+#     os.path.join(BASE_DIR, 'pod/static'),
+#     )
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
