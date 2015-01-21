@@ -13,7 +13,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
 PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
 STATIC_ROOT = os.path.join(PROJECT_PATH,'static')
 
