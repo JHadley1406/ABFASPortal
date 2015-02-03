@@ -106,7 +106,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-
+hack INTO THE INTERNEY
 
 # DATABASE_URL = 'postgresql:///postgresql'
 
