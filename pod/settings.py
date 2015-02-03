@@ -85,11 +85,6 @@ WSGI_APPLICATION = 'pod.wsgi.application'
 # }
 
 
-#HEROKU
-# DATABASES = {'default': dj_database_url.config(default=os.environ["DATABASE_URL"])}
-
-
-
 
 
 # Internationalization
@@ -104,13 +99,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-hack INTO THE INTERNEY
-
-# DATABASE_URL = 'postgresql:///postgresql'
-
-
+\
 # DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 import dj_database_url
